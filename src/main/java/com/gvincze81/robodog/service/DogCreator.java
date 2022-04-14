@@ -10,17 +10,18 @@ public class DogCreator {
     private static final String[] names = {"alpha", "beta", "gamma", "delta"};
     private static final String[] races = {"German Shepherd", "Kuvasz", "Doberman", "Rotweiler"};
 
+    private static final Random random = new Random();
+
     public static Dog createRandomDog()
     {
         String name = getRandomElem(names);
         Breed breed = new Breed(getRandomElem(races));
-        int age = new Random().nextInt(MAX_AGE);
+        int age = random.nextInt(MAX_AGE);
         return new Dog(name, age, breed);
     }
 
     private static String getRandomElem(String[] arr)
     {
-        Random random = new Random();
         return arr[random.nextInt(arr.length)];
     }
 
