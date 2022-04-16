@@ -11,25 +11,25 @@ import java.util.List;
 public class DogController {
     private final DogStorage dogStorage = new DogStorage();
 
-    @GetMapping("/dogs")
+    @GetMapping("/api/dogs")
     public List<Dog> getAllDogs()
     {
         return dogStorage.getDogs();
     }
 
-    @GetMapping("/random-dog")
+    @GetMapping("/api/random-dog")
     public Dog getRandomDog()
     {
         return dogStorage.addRandomDog();
     }
 
-    @PostMapping("/new-dog")
+    @PostMapping("/api/new-dog")
     public void newDog(@RequestBody Dog dog)
     {
         dogStorage.addDog(dog);
     }
 
-    @PutMapping("/update-dog/{name}")
+    @PutMapping("/api/update-dog/{name}")
     public Dog updateDog(@PathVariable String name, @RequestBody Dog dog)
     {
         return dogStorage.updateDog(name, dog.getAge(), dog.getBreed());
