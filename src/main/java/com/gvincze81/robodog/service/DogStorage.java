@@ -2,12 +2,15 @@ package com.gvincze81.robodog.service;
 
 import com.gvincze81.robodog.model.Breed;
 import com.gvincze81.robodog.model.Dog;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class DogStorage {
     private final List<Dog> dogs = new ArrayList<>();
+
+    public DogStorage() {}
 
     public void addDog(Dog dog){
         dogs.add(dog);

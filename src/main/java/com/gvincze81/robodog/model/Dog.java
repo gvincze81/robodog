@@ -14,6 +14,8 @@ public class Dog {
     @Getter
     private Breed breed;
 
+    public  Dog() {}
+
     public Dog(String name, int age, Breed breed) {
         this.name = name;
         this.age = age;
