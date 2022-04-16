@@ -22,15 +22,18 @@ public class DogStorage {
         return dog;
     }
 
-    public void updateDog(String name, int age, Breed breed)
+    public Dog updateDog(String name, int age, Breed breed)
     {
+        Dog response = new Dog();
         for (Dog dog : dogs) {
             if (dog.getName().equals(name)) {
                 dog.setAge(age);
                 dog.setBreed(breed);
+                response = dog;
                 break;
             }
         }
+        return response;
     }
 
     public List<Dog> getDogs() {
