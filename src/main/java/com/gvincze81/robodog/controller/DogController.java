@@ -20,13 +20,11 @@ public class DogController {
     @GetMapping("/random-dog")
     public Dog getRandomDog()
     {
-        Dog dog = DogCreator.createRandomDog();
-        dogStorage.addDog(dog);
-        return dog;
+        return dogStorage.addRandomDog();
     }
 
     @PostMapping("/new-dog")
-    public void newRandomDog(@RequestBody Dog dog)
+    public void newDog(@RequestBody Dog dog)
     {
         dogStorage.addDog(dog);
     }

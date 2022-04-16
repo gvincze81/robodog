@@ -15,6 +15,13 @@ public class DogStorage {
         dogs.add(dog);
     }
 
+    public Dog addRandomDog()
+    {
+        Dog dog = DogCreator.createRandomDog();
+        dogs.add(dog);
+        return dog;
+    }
+
     public void updateDog(String name, int age, Breed breed)
     {
         for (Dog dog : dogs) {
