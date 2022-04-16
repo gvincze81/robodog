@@ -1,10 +1,8 @@
 package com.gvincze81.robodog.controller;
 
-import com.gvincze81.robodog.model.Breed;
 import com.gvincze81.robodog.model.Dog;
 import com.gvincze81.robodog.service.DogCreator;
 import com.gvincze81.robodog.service.DogStorage;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

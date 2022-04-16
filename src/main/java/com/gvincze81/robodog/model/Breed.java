@@ -1,7 +1,5 @@
 package com.gvincze81.robodog.model;
 
-import org.springframework.beans.factory.annotation.Autowired;
-
 public class Breed {
     private String race;
 

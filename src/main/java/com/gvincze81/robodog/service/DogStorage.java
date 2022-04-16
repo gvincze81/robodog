@@ -2,7 +2,6 @@ package com.gvincze81.robodog.service;
 
 import com.gvincze81.robodog.model.Breed;
 import com.gvincze81.robodog.model.Dog;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.ArrayList;
 import java.util.List;
